@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto — ARQÉ ARIAS DESIGN</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Pannellum -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/gallery.css">
+
+  <style>
+    /* ---- Project Hero ---- */
+    .project-hero {
+      position: relative;
+      height: 85vh;
+      min-height: 500px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .project-hero__img {
+      position: absolute;
+      inset: -15%;
+      background-size: cover;
+      background-position: center;
+      will-change: transform;
+    }
+
+    .project-hero__img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13,13,13,0.92) 0%, rgba(13,13,13,0.3) 60%, transparent 100%);
+    }
+
+    .project-hero__content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--space-3xl) var(--space-xl);
+    }
+
+    .project-hero__cat {
+      margin-bottom: var(--space-md);
+    }
+
+    .project-hero__title {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: clamp(2.5rem, 6vw, 5.5rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .project-hero__subtitle {
+      font-size: 0.9rem;
+      color: var(--color-white-dim);
+      margin-top: var(--space-md);
+      letter-spacing: 0.05em;
+    }
+
+    /* ---- Metadata strip ---- */
+    .project-meta {
+      background: var(--color-bg-elevated);
+      border-bottom: 1px solid var(--color-border-soft);
+    }
+
+    .project-meta__inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    .project-meta__item {
+      flex: 1;
+      min-width: 140px;
+      padding: var(--space-lg) var(--space-xl);
+      border-right: 1px solid var(--color-border-soft);
+    }
+
+    .project-meta__item:last-child { border-right: none; }
+
+    .project-meta__label {
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .project-meta__value {
+      font-size: 0.88rem;
+      color: var(--color-white-dim);
+    }
+
+    /* ---- Project body ---- */
+    .project-body {
+      padding: var(--space-4xl) 0;
+    }
+
+    .project-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: var(--space-3xl);
+      align-items: start;
+    }
+
+    @media (max-width: 1024px) {
+      .project-layout { grid-template-columns: 1fr; }
+    }
+
+    .project-description__summary {
+      font-family: var(--font-serif);
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-weight: 300;
+      line-height: 1.5;
+      color: var(--color-white);
+      margin-bottom: var(--space-xl);
+    }
+
+    .project-description__text {
+      font-size: 0.9375rem;
+      color: var(--color-white-dim);
+      line-height: 1.85;
+    }
+
+    .project-challenge {
+      margin-top: var(--space-2xl);
+      padding: var(--space-xl);
+      border-left: 2px solid var(--color-gold);
+      background: rgba(201, 164, 101, 0.04);
+    }
+
+    .project-challenge__label {
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: var(--space-md);
+      display: block;
+    }
+
+    /* Sidebar */
+    .project-sidebar {
+      position: sticky;
+      top: calc(var(--nav-height) + var(--space-xl));
+    }
+
+    .project-sidebar__block {
+      margin-bottom: var(--space-2xl);
+      padding: var(--space-xl);
+      border: 1px solid var(--color-border-soft);
+      background: var(--color-bg-elevated);
+    }
+
+    .project-sidebar__title {
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: var(--space-lg);
+    }
+
+    .project-sidebar__row {
+      display: flex;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-sm);
+      font-size: 0.82rem;
+    }
+
+    .project-sidebar__row-label {
+      color: var(--color-muted);
+      min-width: 80px;
+      flex-shrink: 0;
+    }
+
+    .project-sidebar__row-value {
+      color: var(--color-white-dim);
+    }
+
+    .project-sidebar__team {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .project-sidebar__team-member {
+      font-size: 0.82rem;
+      color: var(--color-white-dim);
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+
+    .project-sidebar__team-member::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      flex-shrink: 0;
+    }
+
+    /* ---- Project gallery ---- */
+    .project-gallery {
+      background: var(--color-bg);
+      padding: var(--space-3xl) 0;
+    }
+
+    .project-gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--grid-gap);
+    }
+
+    @media (max-width: 768px) {
+      .project-gallery__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .project-gallery__grid { grid-template-columns: 1fr; }
+    }
+
+    .project-gallery__item {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      cursor: none;
+    }
+
+    .project-gallery__item.item--wide {
+      grid-column: span 2;
+      aspect-ratio: 16/7;
+    }
+
+    .project-gallery__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--duration-slow) var(--ease-luxury);
+    }
+
+    .project-gallery__item:hover img { transform: scale(1.06); }
+
+    /* ---- Panoramas section ---- */
+    .project-panos {
+      background: var(--color-bg-elevated);
+      padding: var(--space-3xl) 0;
+      border-top: 1px solid var(--color-border-soft);
+    }
+
+    /* ---- Videos section ---- */
+    .project-videos {
+      background: var(--color-bg);
+      padding: var(--space-3xl) 0;
+      border-top: 1px solid var(--color-border-soft);
+    }
+
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: var(--space-lg);
+    }
+
+    @media (max-width: 480px) {
+      .videos-grid { grid-template-columns: 1fr; }
+    }
+
+    .video-card {
+      cursor: none;
+    }
+
+    .video-card__thumb {
+      aspect-ratio: 16/9;
+      position: relative;
+      overflow: hidden;
+      background: var(--color-bg-card);
+    }
+
+    .video-card__thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--duration-mid) var(--ease-luxury);
+    }
+
+    .video-card:hover .video-card__thumb img { transform: scale(1.04); }
+
+    .video-card__play {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(13,13,13,0.4);
+      transition: background var(--duration-fast);
+    }
+
+    .video-card:hover .video-card__play { background: rgba(13,13,13,0.25); }
+
+    .video-card__play-btn {
+      width: 56px;
+      height: 56px;
+      border: 1.5px solid rgba(255,255,255,0.6);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+      transition: all var(--duration-fast);
+    }
+
+    .video-card:hover .video-card__play-btn {
+      border-color: var(--color-gold);
+      color: var(--color-gold);
+      background: rgba(201,164,101,0.15);
+    }
+
+    .video-card__play-btn svg { width: 20px; height: 20px; margin-left: 3px; }
+
+    .video-card__info {
+      padding: var(--space-md) 0;
+    }
+
+    .video-card__title {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--color-white);
+      margin-bottom: 4px;
+    }
+
+    .video-card__duration {
+      font-size: 0.72rem;
+      color: var(--color-muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* ---- Awards ---- */
+    .project-awards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+
+    .project-award {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: var(--space-sm) var(--space-md);
+      border: 1px solid rgba(201,164,101,0.2);
+      background: rgba(201,164,101,0.04);
+    }
+
+    .project-award__icon {
+      color: var(--color-gold);
+      flex-shrink: 0;
+    }
+
+    .project-award__icon svg { width: 14px; height: 14px; }
+
+    .project-award__text {
+      font-size: 0.78rem;
+      color: var(--color-white-dim);
+    }
+
+    /* ---- Next project ---- */
+    .project-next {
+      background: var(--color-bg-elevated);
+      border-top: 1px solid var(--color-border-soft);
+    }
+
+    .project-next__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-2xl) 0;
+      gap: var(--space-xl);
+      text-decoration: none;
+      transition: opacity var(--duration-fast);
+    }
+
+    .project-next__inner:hover { opacity: 0.75; }
+
+    .project-next__label {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      display: block;
+      margin-bottom: var(--space-xs);
+    }
+
+    .project-next__title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      color: var(--color-white);
+    }
+
+    .project-next__arrow {
+      color: var(--color-gold);
+      flex-shrink: 0;
+      transition: transform var(--duration-fast);
+    }
+
+    .project-next__inner:hover .project-next__arrow { transform: translate(8px, -8px); }
+    .project-next__arrow svg { width: 28px; height: 28px; }
+
+    /* ---- Loading state ---- */
+    .project-loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      gap: var(--space-md);
+      color: var(--color-muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <!-- Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+  <!-- Page transition -->
+  <div class="page-transition"></div>
+
+  <!-- Navigation -->
+  <nav class="nav nav--scrolled" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" data-transition>
+        <span class="nav__logo-name">ARQÉ ARIAS</span>
+        <span class="nav__logo-sub">Design Studio</span>
+      </a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link" data-transition>Inicio</a>
+        <a href="portfolio.html" class="nav__link active" data-transition>Portafolio</a>
+        <a href="index.html#philosophy" class="nav__link">Estudio</a>
+        <a href="index.html#contact" class="nav__cta btn">Contacto</a>
+      </div>
+      <button class="nav__burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="nav__mobile">
+    <a href="index.html" class="nav__mobile-link" data-transition>Inicio</a>
+    <a href="portfolio.html" class="nav__mobile-link" data-transition>Portafolio</a>
+    <a href="index.html#contact" class="nav__mobile-link">Contacto</a>
+  </div>
+
+  <!-- Dynamic content container -->
+  <div id="project-content">
+    <div class="project-loading">
+      <div class="spinner"></div>
+      Cargando proyecto...
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="site-footer" style="display:none">
+    <div class="container--wide">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo-name">ARQÉ ARIAS</div>
+          <div class="footer__logo-sub">Design Studio</div>
+          <p class="footer__tagline">Architecture as the Art of Living.</p>
+        </div>
+        <div>
+          <div class="footer__col-title">Navegación</div>
+          <div class="footer__links">
+            <a href="index.html" class="footer__link" data-transition>Inicio</a>
+            <a href="portfolio.html" class="footer__link" data-transition>Portafolio</a>
+            <a href="index.html#contact" class="footer__link">Contacto</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Contacto</div>
+          <div class="footer__contact-item">
+            <strong>Email</strong> contacto@arqeariasdesign.com
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">© 2026 ARQÉ ARIAS DESIGN.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/panorama.js"></script>
+  <script src="js/video.js"></script>
+
+  <script>
+    const CAT_LABELS = { residential:'Residencial', commercial:'Comercial', interior:'Interior', urban:'Urbano' };
+
+    async function renderProject() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      if (!id) { window.location.href = 'portfolio.html'; return; }
+
+      await window.AQD.loadProjects();
+      const project = window.AQD.getById(id);
+
+      if (!project) {
+        document.getElementById('project-content').innerHTML = `
+          <div style="min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;text-align:center;padding:2rem">
+            <h1 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#F5F5F0">Proyecto no encontrado</h1>
+            <a href="portfolio.html" class="btn btn--primary" style="margin-top:1rem">Ver portafolio</a>
+          </div>
+        `;
+        return;
+      }
+
+      // Update page title
+      document.title = `${project.title} — ARQÉ ARIAS DESIGN`;
+
+      const catLabel = CAT_LABELS[project.category] || project.category;
+      const hasPanos = project.panoramas && project.panoramas.length > 0;
+      const hasVideos = project.videos && project.videos.length > 0;
+      const hasAwards = project.specs.awards && project.specs.awards.length > 0;
+
+      // Next project
+      const all = window.AQD.getPublished();
+      const currentIdx = all.findIndex(p => p.id === id);
+      const nextProject = all[(currentIdx + 1) % all.length];
+
+      document.getElementById('project-content').innerHTML = `
+        <!-- Hero -->
+        <div class="project-hero">
+          <div class="project-hero__img" style="background-image:url('${project.heroImage || project.coverImage}')"></div>
+          <div class="project-hero__content">
+            <div class="project-hero__cat">
+              <span class="t-label">${catLabel}</span>
+              ${project.status === 'in-progress' ? '<span class="badge badge--in-progress" style="margin-left:0.75rem">En progreso</span>' : ''}
+            </div>
+            <h1 class="project-hero__title">${project.title}</h1>
+            <p class="project-hero__subtitle">${project.subtitle}</p>
+          </div>
+        </div>
+
+        <!-- Metadata strip -->
+        <div class="project-meta">
+          <div class="container--wide">
+            <div class="project-meta__inner">
+              <div class="project-meta__item">
+                <span class="project-meta__label">Año</span>
+                <span class="project-meta__value">${project.year}</span>
+              </div>
+              <div class="project-meta__item">
+                <span class="project-meta__label">Ubicación</span>
+                <span class="project-meta__value">${project.specs.location}</span>
+              </div>
+              <div class="project-meta__item">
+                <span class="project-meta__label">Área</span>
+                <span class="project-meta__value">${project.specs.area}</span>
+              </div>
+              <div class="project-meta__item">
+                <span class="project-meta__label">Cliente</span>
+                <span class="project-meta__value">${project.specs.client}</span>
+              </div>
+              ${project.images.length ? `
+              <div class="project-meta__item">
+                <span class="project-meta__label">Imágenes</span>
+                <span class="project-meta__value">${project.images.length}</span>
+              </div>` : ''}
+              ${hasPanos ? `
+              <div class="project-meta__item">
+                <span class="project-meta__label">Vistas 360°</span>
+                <span class="project-meta__value">${project.panoramas.length}</span>
+              </div>` : ''}
+            </div>
+          </div>
+        </div>
+
+        <!-- Body -->
+        <section class="project-body">
+          <div class="container">
+            <div class="project-layout">
+              <!-- Description -->
+              <div>
+                <p class="project-description__summary" data-fade-up>${project.description.summary}</p>
+                <div class="gold-line" data-animate></div>
+                <p class="project-description__text" data-fade-up style="margin-top:var(--space-xl)">${project.description.full}</p>
+
+                ${project.description.challenge ? `
+                <div class="project-challenge" data-fade-up>
+                  <span class="project-challenge__label">Desafío</span>
+                  <p style="font-size:0.9rem;color:var(--color-white-dim);line-height:1.75">${project.description.challenge}</p>
+                </div>` : ''}
+
+                ${project.description.solution ? `
+                <div class="project-challenge" data-fade-up style="margin-top:var(--space-md);border-left-color:rgba(201,164,101,0.35)">
+                  <span class="project-challenge__label">Solución</span>
+                  <p style="font-size:0.9rem;color:var(--color-white-dim);line-height:1.75">${project.description.solution}</p>
+                </div>` : ''}
+
+                ${hasAwards ? `
+                <div style="margin-top:var(--space-2xl)" data-fade-up>
+                  <div class="t-label" style="margin-bottom:var(--space-md)">Reconocimientos</div>
+                  <div class="project-awards">
+                    ${project.specs.awards.map(a => `
+                      <div class="project-award">
+                        <span class="project-award__icon">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                        </span>
+                        <span class="project-award__text">${a}</span>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>` : ''}
+              </div>
+
+              <!-- Sidebar -->
+              <aside class="project-sidebar" data-fade-right>
+                <div class="project-sidebar__block">
+                  <div class="project-sidebar__title">Ficha técnica</div>
+                  ${project.specs.area ? `<div class="project-sidebar__row"><span class="project-sidebar__row-label">Área</span><span class="project-sidebar__row-value">${project.specs.area}</span></div>` : ''}
+                  ${project.specs.location ? `<div class="project-sidebar__row"><span class="project-sidebar__row-label">Ubicación</span><span class="project-sidebar__row-value">${project.specs.location}</span></div>` : ''}
+                  <div class="project-sidebar__row"><span class="project-sidebar__row-label">Año</span><span class="project-sidebar__row-value">${project.year}</span></div>
+                  ${project.specs.client ? `<div class="project-sidebar__row"><span class="project-sidebar__row-label">Cliente</span><span class="project-sidebar__row-value">${project.specs.client}</span></div>` : ''}
+                  <div class="project-sidebar__row" style="margin-top:var(--space-xs)">
+                    <span class="project-sidebar__row-label">Estado</span>
+                    <span class="badge badge--${project.status === 'completed' ? 'completed' : 'in-progress'}">${project.status === 'completed' ? 'Completado' : 'En progreso'}</span>
+                  </div>
+                </div>
+
+                ${project.specs.team && project.specs.team.length ? `
+                <div class="project-sidebar__block">
+                  <div class="project-sidebar__title">Equipo</div>
+                  <div class="project-sidebar__team">
+                    ${project.specs.team.map(m => `<span class="project-sidebar__team-member">${m}</span>`).join('')}
+                  </div>
+                </div>` : ''}
+
+                ${project.specs.collaborators && project.specs.collaborators.length ? `
+                <div class="project-sidebar__block">
+                  <div class="project-sidebar__title">Colaboradores</div>
+                  <div class="project-sidebar__team">
+                    ${project.specs.collaborators.map(c => `<span class="project-sidebar__team-member">${c}</span>`).join('')}
+                  </div>
+                </div>` : ''}
+
+                <div style="margin-top:var(--space-xl)">
+                  <a href="portfolio.html" class="btn btn--ghost" data-transition style="width:100%;justify-content:center">
+                    ← Ver portafolio
+                  </a>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <!-- Image gallery -->
+        ${project.images.length ? `
+        <section class="project-gallery">
+          <div class="container">
+            <div class="section-header" style="margin-bottom:var(--space-xl)">
+              <div class="section-header__label">
+                <span class="t-label">Galería</span>
+              </div>
+              <div class="subgallery-filters">
+                <button class="subfilter-btn active" data-sub-filter="all">Todas</button>
+                ${project.images.some(i=>i.type==='render') ? '<button class="subfilter-btn" data-sub-filter="render">Renders</button>' : ''}
+                ${project.images.some(i=>i.type==='photo') ? '<button class="subfilter-btn" data-sub-filter="photo">Fotos</button>' : ''}
+              </div>
+            </div>
+            <div class="project-gallery__grid" id="proj-gallery">
+              ${project.images.map((img, i) => `
+                <div class="project-gallery__item${i === 0 ? ' item--wide' : ''}"
+                     data-type="${img.type}" data-index="${i}"
+                     onclick="openLightbox(window.__projectImages, ${i})">
+                  <img src="${img.url}" alt="${img.caption || project.title}" loading="lazy">
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </section>` : ''}
+
+        <!-- Panoramas -->
+        ${hasPanos ? `
+        <section class="project-panos">
+          <div class="container">
+            <div class="section-header" style="margin-bottom:var(--space-xl)" data-fade-up>
+              <div class="section-header__label"><span class="t-label">Vistas 360°</span></div>
+              <h2 class="t-h2">Explora el espacio</h2>
+              <p class="t-body" style="margin-top:var(--space-md);max-width:480px">
+                Usa el ratón o los dedos para explorar estas vistas panorámicas inmersivas del proyecto.
+              </p>
+            </div>
+            <div class="pano-thumbs" data-fade-up>
+              ${project.panoramas.map(pano => `
+                <div class="pano-thumb" data-pano='${JSON.stringify(pano)}'>
+                  <img src="${pano.imageUrl}" alt="${pano.title}" loading="lazy">
+                  <div class="pano-thumb__label">
+                    <span class="pano-thumb__icon">360°</span>
+                    <p style="font-size:0.65rem;color:rgba(255,255,255,0.6);margin-top:4px;text-align:center;padding:0 0.5rem">${pano.title}</p>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </section>` : ''}
+
+        <!-- Videos -->
+        ${hasVideos ? `
+        <section class="project-videos">
+          <div class="container">
+            <div class="section-header" style="margin-bottom:var(--space-xl)" data-fade-up>
+              <div class="section-header__label"><span class="t-label">Video</span></div>
+              <h2 class="t-h2">Recorrido visual</h2>
+            </div>
+            <div class="videos-grid" data-stagger>
+              ${project.videos.map(vid => `
+                <div class="video-card" data-child onclick="openVideoModal(${JSON.stringify(vid).replace(/"/g, '&quot;')})">
+                  <div class="video-card__thumb">
+                    <img src="${vid.poster || project.coverImage}" alt="${vid.title}" loading="lazy">
+                    <div class="video-card__play">
+                      <div class="video-card__play-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="video-card__info">
+                    <div class="video-card__title">${vid.title}</div>
+                    ${vid.duration ? `<div class="video-card__duration">${vid.duration}</div>` : ''}
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        </section>` : ''}
+
+        <!-- Next project -->
+        ${nextProject && nextProject.id !== id ? `
+        <section class="project-next">
+          <div class="container">
+            <a href="project.html?id=${nextProject.id}" class="project-next__inner" data-transition>
+              <div>
+                <span class="project-next__label">Siguiente proyecto</span>
+                <div class="project-next__title">${nextProject.title}</div>
+                <p style="font-size:0.8rem;color:var(--color-muted);margin-top:4px">${nextProject.specs.location} · ${nextProject.year}</p>
+              </div>
+              <span class="project-next__arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </span>
+            </a>
+          </div>
+        </section>` : ''}
+      `;
+
+      // Store images for lightbox
+      window.__projectImages = project.images;
+
+      // Show footer
+      document.getElementById('site-footer').style.display = '';
+
+      // Subgallery filter
+      document.querySelectorAll('.subfilter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.subfilter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.getAttribute('data-sub-filter');
+          document.querySelectorAll('.project-gallery__item').forEach(item => {
+            const show = filter === 'all' || item.dataset.type === filter;
+            item.style.display = show ? '' : 'none';
+          });
+        });
+      });
+
+      // Re-init page transitions for dynamic links
+      initPageTransition();
+
+      // Hero parallax
+      const heroImg = document.querySelector('.project-hero__img');
+      if (heroImg && typeof gsap !== 'undefined') {
+        gsap.to(heroImg, {
+          yPercent: 20,
+          ease: 'none',
+          scrollTrigger: { trigger: '.project-hero', start: 'top top', end: 'bottom top', scrub: true }
+        });
+      }
+
+      // Scroll animations
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        ScrollTrigger.batch('[data-fade-up]', {
+          onEnter: els => gsap.from(els, { y: 40, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.1 }),
+          start: 'top 88%', once: true
+        });
+        ScrollTrigger.batch('[data-fade-right]', {
+          onEnter: els => gsap.from(els, { x: 40, opacity: 0, duration: 0.9, ease: 'power3.out', stagger: 0.1 }),
+          start: 'top 88%', once: true
+        });
+        ScrollTrigger.batch('[data-stagger] [data-child]', {
+          onEnter: els => gsap.from(els, { opacity: 0, y: 20, duration: 0.7, ease: 'power3.out', stagger: 0.1 }),
+          start: 'top 88%', once: true
+        });
+        document.querySelectorAll('.gold-line[data-animate]').forEach(line => {
+          gsap.from(line, { scaleX: 0, transformOrigin: 'left center', duration: 1.2, ease: 'power3.inOut',
+            scrollTrigger: { trigger: line, start: 'top 90%', once: true }
+          });
+        });
+      }
+    }
+
+    // Make initPageTransition available post-render
+    function initPageTransition() {
+      if (typeof window.initPageTransition === 'function') return;
+      const overlay = document.querySelector('.page-transition');
+      if (!overlay) return;
+      document.querySelectorAll('a[href][data-transition]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto')) return;
+        if (link._transitionBound) return;
+        link._transitionBound = true;
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          const target = link.href;
+          gsap.to(overlay, { scaleY: 1, duration: 0.55, ease: 'power2.inOut', transformOrigin: 'bottom center',
+            onComplete: () => { window.location.href = target; }
+          });
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', renderProject);
+  </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de proyectos — ARQÉ ARIAS DESIGN. Arquitectura residencial, comercial, interior y urbana.">
+  <title>Portafolio — ARQÉ ARIAS DESIGN</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Pannellum -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+  <!-- Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+  <!-- Page transition -->
+  <div class="page-transition"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" data-transition>
+        <span class="nav__logo-name">ARQÉ ARIAS</span>
+        <span class="nav__logo-sub">Design Studio</span>
+      </a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link" data-transition>Inicio</a>
+        <a href="portfolio.html" class="nav__link active" data-transition>Portafolio</a>
+        <a href="index.html#philosophy" class="nav__link">Estudio</a>
+        <a href="index.html#services" class="nav__link">Servicios</a>
+        <a href="index.html#contact" class="nav__cta btn">Contacto</a>
+      </div>
+      <button class="nav__burger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="nav__mobile">
+    <a href="index.html" class="nav__mobile-link" data-transition>Inicio</a>
+    <a href="portfolio.html" class="nav__mobile-link" data-transition>Portafolio</a>
+    <a href="index.html#philosophy" class="nav__mobile-link">Estudio</a>
+    <a href="index.html#services" class="nav__mobile-link">Servicios</a>
+    <a href="index.html#contact" class="nav__mobile-link">Contacto</a>
+  </div>
+
+  <main>
+    <!-- Portfolio Header -->
+    <div class="portfolio-header">
+      <div class="container">
+        <div class="portfolio-header__inner">
+          <div>
+            <div class="section-header__label" style="margin-bottom:var(--space-md)">
+              <span class="t-label">Portafolio</span>
+            </div>
+            <h1 class="t-h1" data-reveal>Todos los proyectos</h1>
+          </div>
+          <div>
+            <p class="portfolio-header__count">— proyectos</p>
+          </div>
+        </div>
+        <div style="margin-top: var(--space-xl)">
+          <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="*">Todos</button>
+            <button class="filter-btn" data-filter=".cat-residential">Residencial</button>
+            <button class="filter-btn" data-filter=".cat-commercial">Comercial</button>
+            <button class="filter-btn" data-filter=".cat-interior">Interior</button>
+            <button class="filter-btn" data-filter=".cat-urban">Urbano</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <section style="padding: 0 0 var(--space-4xl)">
+      <div class="container--wide" style="padding-top:var(--space-xl)">
+        <div class="gallery-grid">
+          <div class="gallery-sizer"></div>
+          <!-- Cards rendered dynamically by gallery.js -->
+        </div>
+        <div class="gallery-empty">
+          <div class="gallery-empty-title">No hay proyectos en esta categoría</div>
+          <p class="t-caption">Prueba con otra categoría o vuelve pronto</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA strip -->
+    <section style="background:var(--color-bg-elevated);border-top:1px solid var(--color-border-soft);padding:var(--space-3xl) 0">
+      <div class="container" style="text-align:center">
+        <p class="t-label" style="margin-bottom:var(--space-md)">¿Tiene un proyecto en mente?</p>
+        <h2 class="t-h1" data-reveal>Trabajemos juntos</h2>
+        <div class="gold-line" data-animate style="margin: var(--space-lg) auto"></div>
+        <p class="t-body" style="max-width:480px;margin:0 auto var(--space-xl)">
+          Cuéntenos su visión. Nuestro equipo está listo para convertirla en arquitectura de excepción.
+        </p>
+        <a href="index.html#contact" class="btn btn--primary" data-transition>
+          Iniciar conversación
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:14px;height:14px"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container--wide">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo-name">ARQÉ ARIAS</div>
+          <div class="footer__logo-sub">Design Studio</div>
+          <p class="footer__tagline">Architecture as the Art of Living. Bogotá, Colombia.</p>
+        </div>
+        <div>
+          <div class="footer__col-title">Navegación</div>
+          <div class="footer__links">
+            <a href="index.html" class="footer__link" data-transition>Inicio</a>
+            <a href="portfolio.html" class="footer__link" data-transition>Portafolio</a>
+            <a href="index.html#contact" class="footer__link">Contacto</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Categorías</div>
+          <div class="footer__links">
+            <a href="portfolio.html?filter=residential" class="footer__link">Residencial</a>
+            <a href="portfolio.html?filter=commercial" class="footer__link">Comercial</a>
+            <a href="portfolio.html?filter=interior" class="footer__link">Interior</a>
+            <a href="portfolio.html?filter=urban" class="footer__link">Urbano</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Contacto</div>
+          <div class="footer__contact-item">
+            <strong>Email</strong> contacto@arqeariasdesign.com
+          </div>
+          <div class="footer__contact-item">
+            <strong>Tel</strong> +57 300 000 0000
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copyright">© 2026 ARQÉ ARIAS DESIGN. Todos los derechos reservados.</span>
+        <div class="footer__bottom-links">
+          <a href="admin.html" class="footer__bottom-link">Admin</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/panorama.js"></script>
+  <script src="js/video.js"></script>
+
+  <script>
+    // Apply filter from URL param
+    window.addEventListener('load', () => {
+      const params = new URLSearchParams(window.location.search);
+      const filter = params.get('filter');
+      if (filter) {
+        const btn = document.querySelector(`.filter-btn[data-filter=".cat-${filter}"]`);
+        if (btn) btn.click();
+      }
+    });
+  </script>
+</body>
+</html>
