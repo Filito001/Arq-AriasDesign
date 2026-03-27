@@ -1,0 +1,540 @@
+{
+  "meta": {
+    "studioName": "ARQÉ ARIAS DESIGN",
+    "tagline": "Architecture as the Art of Living",
+    "description": "Studio de arquitectura especializado en diseño residencial, comercial e interior. Transformamos espacios en experiencias.",
+    "email": "ArqeAriasDesign@proton.me",
+    "phone": "+57 320 3000 120",
+    "location": "Bogotá, Colombia",
+    "social": {
+      "instagram": "https://www.instagram.com/arq_filemon/",
+      "linkedin": "https://linkedin.com/company/arqeariasdesign",
+      "behance": "https://behance.net/arqeariasdesign"
+    },
+    "lastUpdated": "2026-03-27"
+  },
+  "categories": [
+    {
+      "id": "residential",
+      "label": "Residencial",
+      "labelEn": "Residential",
+      "icon": "R",
+      "description": "Viviendas que equilibran funcionalidad y belleza"
+    },
+    {
+      "id": "commercial",
+      "label": "Comercial",
+      "labelEn": "Commercial",
+      "icon": "C",
+      "description": "Espacios que impulsan negocios e inspiran personas"
+    },
+    {
+      "id": "interior",
+      "label": "Interior",
+      "labelEn": "Interior",
+      "icon": "I",
+      "description": "Diseño interior que define atmósferas únicas"
+    },
+    {
+      "id": "urban",
+      "label": "Urbano",
+      "labelEn": "Urban",
+      "icon": "U",
+      "description": "Intervenciones urbanas que transforman ciudades"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-001",
+      "slug": "casa-luz-2024",
+      "title": "Casa Luz",
+      "subtitle": "Residencia Privada — Bogotá, Colombia",
+      "year": 2024,
+      "category": "residential",
+      "status": "completed",
+      "featured": true,
+      "coverImage": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+      "thumbnailImage": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=90",
+      "coverColor": "#1A1208",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=85",
+          "caption": "Fachada norte al atardecer",
+          "type": "render"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&q=85",
+          "caption": "Sala principal — volumen de doble altura",
+          "type": "render"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1600573472556-e636c2acda88?w=1200&q=85",
+          "caption": "Terraza paisajística",
+          "type": "photo"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=85",
+          "caption": "Cocina — materialidad en concreto y madera",
+          "type": "photo"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=1200&q=85",
+          "caption": "Render — Vista exterior nocturna",
+          "type": "render"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=1200&q=85",
+          "caption": "Render — Acceso principal",
+          "type": "render"
+        }
+      ],
+      "panoramas": [
+        {
+          "id": "pano-001-living",
+          "title": "Sala Principal — Vista 360°",
+          "imageUrl": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=2000&q=90",
+          "firstPitch": 0,
+          "firstYaw": 120,
+          "hotspots": [
+            {
+              "pitch": -5,
+              "yaw": 130,
+              "text": "Chimenea de concreto pulido",
+              "type": "info"
+            },
+            {
+              "pitch": 8,
+              "yaw": 220,
+              "text": "Vista hacia la terraza jardín",
+              "type": "info"
+            }
+          ]
+        }
+      ],
+      "videos": [
+        {
+          "id": "vid-001",
+          "title": "Casa Luz — Recorrido Virtual",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "poster": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+          "duration": "3:42"
+        }
+      ],
+      "description": {
+        "summary": "Una meditación sobre la luz y el concreto. Casa Luz redefine el límite entre refugio y paisaje en las laderas de los Andes orientales.",
+        "full": "Situada en un lote de 1.2 hectáreas en el borde oriental de Bogotá, Casa Luz fue concebida como una serie de planos en movimiento que revelan y ocultan alternadamente el bosque nuboso circundante. El proyecto nació de la pregunta: ¿cómo puede una casa ser simultáneamente refugio y mirador?",
+        "challenge": "El desafío principal fue integrar el control climático pasivo manteniendo la honestidad material austera que el cliente requería.",
+        "solution": "Un sistema de muros de masa térmica orientados, combinado con un brise-soleil profundo en la elevación occidental, logra confort todo el año sin refrigeración mecánica."
+      },
+      "specs": {
+        "area": "680 m²",
+        "location": "Bogotá, Colombia",
+        "client": "Privado",
+        "team": [
+          "Arqé Arias",
+          "Juan Villalba",
+          "Sofía Ríos"
+        ],
+        "collaborators": [
+          "Estructural: Ingeniería SAS",
+          "Paisajismo: Tierra Verde"
+        ],
+        "awards": [
+          "Premio Nacional de Arquitectura 2024 — Mención de Honor"
+        ]
+      },
+      "tags": [
+        "concreto",
+        "diseño-pasivo",
+        "paisaje",
+        "lujo"
+      ],
+      "order": 1,
+      "published": true,
+      "createdAt": "2026-01-15T10:00:00Z",
+      "updatedAt": "2026-03-20T14:30:00Z"
+    },
+    {
+      "id": "proj-002",
+      "slug": "torre-vertice-2023",
+      "title": "Torre Vértice",
+      "subtitle": "Edificio Comercial — Medellín, Colombia",
+      "year": 2023,
+      "category": "commercial",
+      "status": "completed",
+      "featured": true,
+      "coverImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
+      "thumbnailImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=90",
+      "coverColor": "#0A0D14",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=85",
+          "caption": "Fachada principal — geometría paramétrica",
+          "type": "render"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=85",
+          "caption": "Lobby — espacio de doble altura",
+          "type": "photo"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=85",
+          "caption": "Plantas de trabajo colaborativo",
+          "type": "photo"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?w=1200&q=85",
+          "caption": "Render — Vista aérea",
+          "type": "render"
+        }
+      ],
+      "panoramas": [],
+      "videos": [
+        {
+          "id": "vid-002",
+          "title": "Torre Vértice — Presentación",
+          "type": "youtube",
+          "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "poster": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
+          "duration": "4:15"
+        }
+      ],
+      "description": {
+        "summary": "Una torre que desafía la gravedad visual. Torre Vértice reinterpreta el rascacielos corporativo con una piel dinámica que responde al sol y al viento.",
+        "full": "El proyecto responde a la necesidad de Medellín de espacios de trabajo de clase mundial que también dialoguen con la topografía y el clima del Valle de Aburrá.",
+        "challenge": "Diseñar una fachada que sea tanto un hito urbano como un sistema de control solar eficiente.",
+        "solution": "Una piel de aletas de aluminio parametrizadas que cambian de ángulo según la orientación, reduciendo la ganancia solar en un 40% mientras crean una imagen dinámica."
+      },
+      "specs": {
+        "area": "18.500 m²",
+        "location": "Medellín, Colombia",
+        "client": "Grupo Empresarial Andino",
+        "team": [
+          "Arqé Arias",
+          "Carlos Méndez",
+          "Paula Gómez"
+        ],
+        "collaborators": [
+          "MEP: TechnoClima",
+          "Fachada: AluminioTech"
+        ],
+        "awards": []
+      },
+      "tags": [
+        "paramétrico",
+        "fachada",
+        "corporativo",
+        "sostenible"
+      ],
+      "order": 2,
+      "published": true,
+      "createdAt": "2025-06-01T10:00:00Z",
+      "updatedAt": "2026-02-10T09:00:00Z"
+    },
+    {
+      "id": "proj-003",
+      "slug": "restaurante-petra-2024",
+      "title": "Restaurante Petra",
+      "subtitle": "Diseño Interior — Cartagena, Colombia",
+      "year": 2024,
+      "category": "interior",
+      "status": "completed",
+      "featured": true,
+      "coverImage": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+      "thumbnailImage": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&q=90",
+      "coverColor": "#140A08",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&q=85",
+          "caption": "Salón principal — iluminación teatral",
+          "type": "photo"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=85",
+          "caption": "Área de bar — materialidad en piedra y latón",
+          "type": "photo"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=1200&q=85",
+          "caption": "Terraza exterior — vista al mar",
+          "type": "photo"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=85",
+          "caption": "Render — Propuesta de iluminación",
+          "type": "render"
+        }
+      ],
+      "panoramas": [
+        {
+          "id": "pano-003-salon",
+          "title": "Salón Principal — Vista 360°",
+          "imageUrl": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=2000&q=90",
+          "firstPitch": 0,
+          "firstYaw": 90,
+          "hotspots": [
+            {
+              "pitch": -10,
+              "yaw": 45,
+              "text": "Mesa del chef — experiencia exclusiva",
+              "type": "info"
+            },
+            {
+              "pitch": 5,
+              "yaw": 270,
+              "text": "Bodega de vinos — colección privada",
+              "type": "info"
+            }
+          ]
+        }
+      ],
+      "videos": [],
+      "description": {
+        "summary": "Un viaje sensorial entre tierra y mar. Petra traduce la geología de las murallas coloniales en un lenguaje contemporáneo de piedra, latón y luz.",
+        "full": "Ubicado en el corazón amurallado de Cartagena, el restaurante Petra fue diseñado para crear una experiencia gastronómica donde la arquitectura y la gastronomía se fusionan en una narrativa única.",
+        "challenge": "Intervenir un inmueble colonial del siglo XVIII respetando su valor patrimonial mientras se crea un ambiente contemporáneo y funcional.",
+        "solution": "Uso de materiales autóctonos (piedra coralina, madera de mangle) en combinación con piezas de diseño contemporáneo que dialogan con la preexistencia sin imitarla."
+      },
+      "specs": {
+        "area": "320 m²",
+        "location": "Cartagena, Colombia",
+        "client": "Petra Hospitality Group",
+        "team": [
+          "Arqé Arias",
+          "Valentina Lara"
+        ],
+        "collaborators": [
+          "Iluminación: LuxDesign",
+          "Mobiliario: ArteOficio"
+        ],
+        "awards": [
+          "Best Restaurant Design — Architectural Digest Colombia 2024"
+        ]
+      },
+      "tags": [
+        "restaurante",
+        "patrimonio",
+        "interior",
+        "piedra"
+      ],
+      "order": 3,
+      "published": true,
+      "createdAt": "2025-09-01T10:00:00Z",
+      "updatedAt": "2026-01-15T12:00:00Z"
+    },
+    {
+      "id": "proj-004",
+      "slug": "parque-lineal-norte-2023",
+      "title": "Parque Lineal Norte",
+      "subtitle": "Espacio Urbano — Bogotá, Colombia",
+      "year": 2023,
+      "category": "urban",
+      "status": "completed",
+      "featured": false,
+      "coverImage": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80",
+      "thumbnailImage": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1600&q=90",
+      "coverColor": "#081408",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&q=85",
+          "caption": "Vista aérea — corredor verde urbano",
+          "type": "photo"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200&q=85",
+          "caption": "Zona de activación cultural",
+          "type": "photo"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1444491741275-3747c53c99b4?w=1200&q=85",
+          "caption": "Render — Plaza de encuentro central",
+          "type": "render"
+        }
+      ],
+      "panoramas": [],
+      "videos": [],
+      "description": {
+        "summary": "Un corredor verde que recose la ciudad. El Parque Lineal Norte transforma una ciclovía abandonada en un eje de vida urbana de 4.2 kilómetros.",
+        "full": "El proyecto convierte una antigua línea férrea en desuso en un parque lineal continuo que conecta cuatro barrios del norte de Bogotá, creando un nuevo eje peatonal, ciclista y de activación cultural.",
+        "challenge": "Diseñar un espacio que responda a las necesidades de comunidades con perfiles muy distintos a lo largo de los 4.2 km de intervención.",
+        "solution": "Una estrategia de 'beads on a string': un corredor continuo verde con nodos de programa específico cada 400 metros, cada uno diseñado con la comunidad local."
+      },
+      "specs": {
+        "area": "4.2 km lineales / 28.000 m²",
+        "location": "Bogotá, Colombia",
+        "client": "Secretaría Distrital de Planeación",
+        "team": [
+          "Arqé Arias",
+          "Miguel Torres",
+          "Ana Herrera",
+          "Luis Pérez"
+        ],
+        "collaborators": [
+          "Infraestructura: CiviliTech",
+          "Paisajismo: EcoVerde"
+        ],
+        "awards": [
+          "Premio de Urbanismo IDU 2023"
+        ]
+      },
+      "tags": [
+        "urbano",
+        "espacio-público",
+        "verde",
+        "movilidad"
+      ],
+      "order": 4,
+      "published": true,
+      "createdAt": "2024-12-01T10:00:00Z",
+      "updatedAt": "2025-08-20T16:00:00Z"
+    },
+    {
+      "id": "proj-005",
+      "slug": "villa-montana-2025",
+      "title": "Villa Montaña",
+      "subtitle": "Residencia de Lujo — Manizales, Colombia",
+      "year": 2025,
+      "category": "residential",
+      "status": "in-progress",
+      "featured": false,
+      "coverImage": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=80",
+      "thumbnailImage": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=400&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1600&q=90",
+      "coverColor": "#0D0A06",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1200&q=85",
+          "caption": "Render — Vista principal desde el valle",
+          "type": "render"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=85",
+          "caption": "Render — Terraza infinita",
+          "type": "render"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&q=85",
+          "caption": "Render — Sala de estar abierta",
+          "type": "render"
+        }
+      ],
+      "panoramas": [
+        {
+          "id": "pano-005-terraza",
+          "title": "Terraza Principal — Vista 360°",
+          "imageUrl": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=2000&q=90",
+          "firstPitch": 5,
+          "firstYaw": 180,
+          "hotspots": [
+            {
+              "pitch": 0,
+              "yaw": 90,
+              "text": "Vista hacia el Nevado del Ruiz",
+              "type": "info"
+            }
+          ]
+        }
+      ],
+      "videos": [],
+      "description": {
+        "summary": "Suspendida entre nubes y montaña. Villa Montaña es un refugio de lujo que celebra la geografía cafetera colombiana con una arquitectura de horizontes abiertos.",
+        "full": "En construcción para entrega a finales de 2025, Villa Montaña responde a la geografía excepcional de las montañas del Eje Cafetero con una arquitectura que prioriza la continuidad visual entre interior y exterior.",
+        "challenge": "Construir en una ladera con pendiente del 35% manteniendo la integridad estructural y minimizando el impacto ambiental.",
+        "solution": "Estructura en pilotes de concreto que apoyan la plataforma principal sobre la pendiente, preservando la vegetación nativa y creando un espacio bajo cubierta para garaje y servicios."
+      },
+      "specs": {
+        "area": "850 m²",
+        "location": "Manizales, Colombia",
+        "client": "Privado",
+        "team": [
+          "Arqé Arias",
+          "Camila Ospina"
+        ],
+        "collaborators": [
+          "Estructural: Montaña Ingeniería"
+        ],
+        "awards": []
+      },
+      "tags": [
+        "montaña",
+        "lujo",
+        "sostenible",
+        "vistas"
+      ],
+      "order": 5,
+      "published": true,
+      "createdAt": "2026-01-20T10:00:00Z",
+      "updatedAt": "2026-03-27T10:00:00Z"
+    },
+    {
+      "id": "proj-006",
+      "slug": "spa-zenu-2024",
+      "title": "Spa Zenú",
+      "subtitle": "Diseño Interior — Santa Marta, Colombia",
+      "year": 2024,
+      "category": "interior",
+      "status": "completed",
+      "featured": false,
+      "coverImage": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80",
+      "thumbnailImage": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&q=80",
+      "heroImage": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1600&q=90",
+      "coverColor": "#06100D",
+      "images": [
+        {
+          "url": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=85",
+          "caption": "Área de tratamientos — penumbra y calma",
+          "type": "photo"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1200&q=85",
+          "caption": "Piscina de hidroterapia",
+          "type": "photo"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1200&q=85",
+          "caption": "Área de descanso — hamacas suspendidas",
+          "type": "render"
+        }
+      ],
+      "panoramas": [],
+      "videos": [],
+      "description": {
+        "summary": "Donde la selva se convierte en ritual. Spa Zenú reinterpreta las tradiciones medicinales zenú en un lenguaje contemporáneo de agua, tierra y botanica tropical.",
+        "full": "El spa ocupa tres pabellones entrelazados en un jardín tropical diseñado específicamente para el proyecto, creando una secuencia de espacios que guían al visitante de lo público a lo profundamente íntimo.",
+        "challenge": "Crear atmósferas de absoluta calma y sensorialidad en un contexto urbano con alta presión acústica.",
+        "solution": "Estrategia de triple barrera acústica (jardín → corredor → sala) combinada con materialidad absorbente (bambú, musgo, agua) que eliminan el ruido exterior."
+      },
+      "specs": {
+        "area": "480 m²",
+        "location": "Santa Marta, Colombia",
+        "client": "Zenú Wellness Group",
+        "team": [
+          "Arqé Arias",
+          "Daniela Castro"
+        ],
+        "collaborators": [
+          "Botánica: Selva Studio",
+          "Acústica: SoundLab"
+        ],
+        "awards": [
+          "Interior Design Award — Colombia Design Week 2024"
+        ]
+      },
+      "tags": [
+        "spa",
+        "bienestar",
+        "tropical",
+        "sensorial"
+      ],
+      "order": 6,
+      "published": true,
+      "createdAt": "2025-04-01T10:00:00Z",
+      "updatedAt": "2025-12-10T14:00:00Z"
+    }
+  ]
+}
